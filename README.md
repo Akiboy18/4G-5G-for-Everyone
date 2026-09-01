@@ -2,6 +2,10 @@
 This repository serves as a living document of my journey through 4G and 5G
 
 ## What is 3GPP ? 
+
+<img width="486" height="242" alt="image" src="https://github.com/user-attachments/assets/a09f4636-18f3-466a-811f-fb090002b682" />
+
+
 > The 3rd Generation Partnership Project (3GPP) is a global collaboration that creates technical specifications and standards for mobile telecommunications
 
 ### What 3GPP Does
