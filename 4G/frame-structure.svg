@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .frame { fill: #ebf4ff; stroke: #2b6cb0; stroke-width: 2; }
+    .subframe { fill: #ffffff; stroke: #2b6cb0; stroke-width: 1.2; }
+    .subframe-hl { fill: #bee3f8; stroke: #2b6cb0; stroke-width: 1.5; }
+    .slot { fill: #f0fff4; stroke: #2f855a; stroke-width: 1.2; }
+    .symbol { fill: #fffaf0; stroke: #c05621; stroke-width: 1; }
+    .label { font-size: 13px; fill: #1a202c; font-weight: 600; text-anchor: middle; }
+    .sub { font-size: 10.5px; fill: #4a5568; text-anchor: middle; }
+    .tiny { font-size: 9px; fill: #4a5568; text-anchor: middle; }
+  </style>
+
+  <!-- Radio frame -->
+  <text x="20" y="30" class="label" text-anchor="start">Radio Frame — 10 ms</text>
+  <rect x="20" y="40" width="960" height="50" class="frame"/>
+  <!-- 10 subframes -->
+  <g>
+    <rect x="20" y="40" width="96" height="50" class="subframe-hl"/>
+    <text x="68" y="70" class="tiny">SF 0</text>
+    <rect x="116" y="40" width="96" height="50" class="subframe"/>
+    <text x="164" y="70" class="tiny">SF 1</text>
+    <rect x="212" y="40" width="96" height="50" class="subframe"/>
+    <text x="260" y="70" class="tiny">SF 2</text>
+    <rect x="308" y="40" width="96" height="50" class="subframe"/>
+    <text x="356" y="70" class="tiny">SF 3</text>
+    <rect x="404" y="40" width="96" height="50" class="subframe"/>
+    <text x="452" y="70" class="tiny">SF 4</text>
+    <rect x="500" y="40" width="96" height="50" class="subframe"/>
+    <text x="548" y="70" class="tiny">SF 5</text>
+    <rect x="596" y="40" width="96" height="50" class="subframe"/>
+    <text x="644" y="70" class="tiny">SF 6</text>
+    <rect x="692" y="40" width="96" height="50" class="subframe"/>
+    <text x="740" y="70" class="tiny">SF 7</text>
+    <rect x="788" y="40" width="96" height="50" class="subframe"/>
+    <text x="836" y="70" class="tiny">SF 8</text>
+    <rect x="884" y="40" width="96" height="50" class="subframe"/>
+    <text x="932" y="70" class="tiny">SF 9</text>
+  </g>
+
+  <!-- Arrow down to zoomed subframe -->
+  <path d="M68,90 L68,120 L500,150" stroke="#718096" stroke-width="1.5" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Zoomed Subframe -->
+  <text x="20" y="175" class="label" text-anchor="start">Subframe 0 — 1 ms (the scheduling unit)</text>
+  <rect x="20" y="185" width="480" height="60" class="subframe-hl"/>
+  <rect x="20" y="185" width="240" height="60" class="slot"/>
+  <text x="140" y="220" class="sub">Slot 0 — 0.5 ms</text>
+  <rect x="260" y="185" width="240" height="60" class="slot"/>
+  <text x="380" y="220" class="sub">Slot 1 — 0.5 ms</text>
+
+  <!-- Arrow down to zoomed slot -->
+  <path d="M140,245 L140,270 L500,300" stroke="#718096" stroke-width="1.5" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Zoomed slot: 7 symbols -->
+  <text x="20" y="325" class="label" text-anchor="start">Slot 0 — 7 OFDM Symbols (normal Cyclic Prefix)</text>
+  <g>
+    <rect x="20" y="335" width="60" height="50" class="symbol"/>
+    <text x="50" y="365" class="tiny">Sym 0</text>
+    <rect x="80" y="335" width="60" height="50" class="symbol"/>
+    <text x="110" y="365" class="tiny">Sym 1</text>
+    <rect x="140" y="335" width="60" height="50" class="symbol"/>
+    <text x="170" y="365" class="tiny">Sym 2</text>
+    <rect x="200" y="335" width="60" height="50" class="symbol"/>
+    <text x="230" y="365" class="tiny">Sym 3</text>
+    <rect x="260" y="335" width="60" height="50" class="symbol"/>
+    <text x="290" y="365" class="tiny">Sym 4</text>
+    <rect x="320" y="335" width="60" height="50" class="symbol"/>
+    <text x="350" y="365" class="tiny">Sym 5</text>
+    <rect x="380" y="335" width="60" height="50" class="symbol"/>
+    <text x="410" y="365" class="tiny">Sym 6</text>
+  </g>
+  <text x="440" y="365" class="sub" text-anchor="start">≈ 66.7 μs useful + CP each</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#718096"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="410" class="tiny" text-anchor="start" font-size="11">Hierarchy: Radio Frame (10ms) → 10 Subframes (1ms) → 2 Slots each (0.5ms) → 7 OFDM Symbols each.</text>
+</svg>
