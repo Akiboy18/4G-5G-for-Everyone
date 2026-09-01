@@ -11,7 +11,7 @@ The entire LTE network system is called the **EPS — Evolved Packet System**. I
     connected over the air"   +       manages who/what/where"
 ```
 
-See [`diagrams/eps-architecture.svg`](diagrams/eps-architecture.svg) for the full visual map — worth opening alongside this chapter.
+See [`diagrams/eps-architecture.svg`](eps-architecture.svg) for the full visual map — worth opening alongside this chapter.
 
 - **E-UTRAN** (Evolved UMTS Terrestrial Radio Access Network) = the radio side. In LTE this is refreshingly simple compared to 3G: it's just **eNodeBs** (base stations) talking directly to each other and to the core. No separate controller node.
 - **EPC** (Evolved Packet Core) = the core side. This is where identity, mobility, billing, and internet routing all happen.
