@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1000 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .subframe { fill: #ebf4ff; stroke: #2b6cb0; stroke-width: 2; }
+    .slot { fill: #ffffff; stroke: #6b46c1; stroke-width: 1.3; }
+    .label { font-size: 13px; fill: #1a202c; font-weight: 600; }
+    .sub { font-size: 11px; fill: #4a5568; }
+    .tiny { font-size: 9.5px; fill: #4a5568; text-anchor: middle; }
+  </style>
+
+  <text x="20" y="30" class="label">Same 1 ms Subframe — Different Numerologies (μ)</text>
+
+  <!-- mu=0 -->
+  <text x="20" y="65" class="sub">μ=0 — 15 kHz — 1 slot (LTE-equivalent, 1 ms/slot)</text>
+  <rect x="20" y="75" width="960" height="40" class="subframe"/>
+  <rect x="24" y="79" width="952" height="32" class="slot"/>
+  <text x="500" y="99" class="tiny">Slot 0 (1 ms)</text>
+
+  <!-- mu=1 -->
+  <text x="20" y="140" class="sub">μ=1 — 30 kHz — 2 slots (0.5 ms/slot)</text>
+  <rect x="20" y="150" width="960" height="40" class="subframe"/>
+  <rect x="24" y="154" width="472" height="32" class="slot"/>
+  <text x="260" y="174" class="tiny">Slot 0</text>
+  <rect x="504" y="154" width="472" height="32" class="slot"/>
+  <text x="740" y="174" class="tiny">Slot 1</text>
+
+  <!-- mu=2 -->
+  <text x="20" y="215" class="sub">μ=2 — 60 kHz — 4 slots (0.25 ms/slot)</text>
+  <rect x="20" y="225" width="960" height="40" class="subframe"/>
+  <rect x="24" y="229" width="232" height="32" class="slot"/><text x="140" y="249" class="tiny">S0</text>
+  <rect x="264" y="229" width="232" height="32" class="slot"/><text x="380" y="249" class="tiny">S1</text>
+  <rect x="504" y="229" width="232" height="32" class="slot"/><text x="620" y="249" class="tiny">S2</text>
+  <rect x="744" y="229" width="232" height="32" class="slot"/><text x="860" y="249" class="tiny">S3</text>
+
+  <!-- mu=3 -->
+  <text x="20" y="290" class="sub">μ=3 — 120 kHz — 8 slots (0.125 ms/slot) — typical FR2/mmWave</text>
+  <rect x="20" y="300" width="960" height="40" class="subframe"/>
+  <g>
+    <rect x="24" y="304" width="112" height="32" class="slot"/>
+    <rect x="144" y="304" width="112" height="32" class="slot"/>
+    <rect x="264" y="304" width="112" height="32" class="slot"/>
+    <rect x="384" y="304" width="112" height="32" class="slot"/>
+    <rect x="504" y="304" width="112" height="32" class="slot"/>
+    <rect x="624" y="304" width="112" height="32" class="slot"/>
+    <rect x="744" y="304" width="112" height="32" class="slot"/>
+    <rect x="864" y="304" width="112" height="32" class="slot"/>
+  </g>
+  <text x="500" y="324" class="tiny">8 slots, each with 14 OFDM symbols</text>
+
+  <text x="20" y="360" class="tiny" text-anchor="start" font-size="11">Higher μ → more, shorter slots per subframe → lower latency, at the cost of needing more bandwidth and tighter synchronization.</text>
+</svg>
